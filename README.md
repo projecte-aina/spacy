@@ -1,4 +1,4 @@
-# spacy releases
+# Spacy 3.0 releases
 
 Beta release for catalan Spacy 3.0 models (for testing purposes only)
 
