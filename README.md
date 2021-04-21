@@ -23,7 +23,9 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.1.0/ca_core
 
 * Dependency parsing
 
-* lookup-based lemmatization without disambiguation from spacy's own dictionaries (not very good, really)
+* lookup-based lemmatization without disambiguation from spacy's own dictionaries 
+
+   (not very good, really, working on a better one)
 
 * Fasttext-based similarity vectors
 
