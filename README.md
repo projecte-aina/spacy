@@ -3,7 +3,12 @@
 Beta release for catalan Spacy 3.0 models (for testing only)
 Based on Ancora corpus annotations and UDEP
 
-Added:
+# Installation:
+
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.1.0/ca_core_web_trf-3.1.0-py3-none-any.whl
+
+
+# Includes:
 
 * Noun Chunks
 
@@ -25,7 +30,7 @@ Added:
 
 * Morphological analysis
 
-Evaluation:
+# Evaluation on test split from UDEP corpus:
 ```
 {
   "token_acc":1.0,
