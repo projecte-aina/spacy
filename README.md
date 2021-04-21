@@ -2,6 +2,8 @@
 
 Beta release for catalan Spacy 3.0 models (for testing purposes only)
 
+https://spacy.io/usage/spacy-101
+
 Based on Ancora corpus annotations and UDEP
 
 # Installation:
