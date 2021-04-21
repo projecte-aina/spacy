@@ -2,16 +2,29 @@
 
 Beta release for catalan Spacy 3.0 models (for testing only)
 Based on Ancora corpus annotations and UDEP
+
 Added:
-** Noun Chunks
-** NERC
-** Fine-grained Parole-like POS tags
-** Coarse XPOS tags
-** Dependency parsing
-** lookup-based lemmatization without disambiguation from spacy's own dictionaries (not very good, really)
-** Fasttext-based similarity vectors
-** BERTa-based transformer
-** tokenization and sentence segmentation
+
+* Noun Chunks
+
+* NERC
+
+* Fine-grained Parole-like POS tags
+
+* Coarse XPOS tags
+
+* Dependency parsing
+
+* lookup-based lemmatization without disambiguation from spacy's own dictionaries (not very good, really)
+
+* Fasttext-based similarity vectors
+
+* BERTa-based transformer
+
+* tokenization and sentence segmentation
+
+* Morphological analysis
+
 Evaluation:
 ```
 {
