@@ -5,10 +5,16 @@ Created on Tue Apr 13 11:44:48 2021
 proves per a fer amb l'spacy3
 Env: spacy_nou
 @author: carme
+
+ATENCIÓ!!!!!
+cal haver-se intal·lat l'spacy i el deplacy:
+    
+  pip install -U pip setuptools wheel
+  pip install spacy
+  pip install deplacy
 """
 
 import spacy
-
 import deplacy
 
 nlp = spacy.load("ca_core_web_trf")
