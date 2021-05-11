@@ -11,7 +11,7 @@ http://temu.bsc.es:8080
 
 # Installation:
 
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.1.0/ca_base_web_trf-3.2.3-py3-none-any.whl
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base_web_trf-3.2.3-py3-none-any.whl
 
 
 # Includes:
