@@ -9,11 +9,11 @@ http://temu.bsc.es:8080
 
 
 # Sources
-Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks
+Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all merged into single training/dev corpora to enable simultaneous multi-task training.
 
 ## Transformer:
 
-BERTa @ Hugging Face
+BERTa @ Hugging Face, a RoBERTa transformer from the 1.760 million token Catalan General Corpus (https://doi.org/10.5281/zenodo.4519348) 
 
 ## Dependency Treebank, XPOS, sentence segmentation
 
