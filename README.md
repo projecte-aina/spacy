@@ -4,10 +4,40 @@ Beta release for catalan Spacy 3.0 models (for testing purposes only)
 
 https://spacy.io/usage/spacy-101
 
-Based on BERTa transformer, Ancora corpus annotations and UDEP
-
 Demo at:
 http://temu.bsc.es:8080
+
+
+# Sources
+Based on BERTa transformer, Ancora corpus annotations and UDEP treebanks
+
+## Transformer:
+
+BERTa @ Hugging Face
+
+## Dependency Treebank, XPOS, sentence segmentation
+
+From version 3.6, with changes for pronouns and multi-word tokenization 
+
+https://universaldependencies.org/ca/
+
+
+## Lemmatization
+
+Adaptation of French lemmatizer, using inhouse-developed word lists and corpus frequencies
+
+## Named Entity Recognition
+
+From original Ancora corpus (https://doi.org/10.5281/zenodo.4529299)
+
+## Word vectors
+
+From FAstText word embeddings: https://doi.org/10.5281/zenodo.4522040
+
+## Text Classification (To come)
+
+From TECLA corpus based on Agencia Catalana de Noticias Newswire
+(https://doi.org/10.5281/zenodo.4627197)
 
 # Installation:
 
@@ -20,7 +50,7 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base
 
 * NERC
 
-* Fine-grained Parole-like POS tags
+* Fine-grained Parole-like POS tags (to comre)
 
 * Coarse XPOS tags
 
@@ -28,14 +58,18 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base
 
 * lookup-based lemmatization with POS disambiguation
 
-
 * BERTa-based transformer
 
 * tokenization and sentence segmentation
 
 * Morphological analysis
 
-# Evaluation on test split from UDEP corpus:
+* Text classification
+
+* Static word vectors (in core model)
+* 
+
+# External evaluation on test split from UDEP corpus:
 ```
   "token_acc":1.0,
   "tag_acc":0.9899974352,
