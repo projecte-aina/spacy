@@ -22,7 +22,7 @@ From version 3.6 of the Catalan Universal Dependencies (https://universaldepende
 
 ## Lemmatization
 
-Adaptation of French lemmatizer, using inhouse-developed word lists and corpus frequencies
+Adaptation of French lemmatizer, using  word lists and corpus frequencies developed in house.
 
 ## Named Entity Recognition
 
@@ -39,9 +39,13 @@ From TeCla corpus based on Agencia Catalana de Noticias Newswire
 
 # Installation:
 
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base_web_trf-3.2.3-py3-none-any.whl
+## base model without word vectors:
 
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.4/ca_base_web_trf-3.2.3-py3-none-any.whl
 
+## core model with word embeddings for lexical similarity
+
+<!---
 # Includes:
 
 * Noun Chunks
