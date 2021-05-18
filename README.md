@@ -9,7 +9,7 @@ http://temu.bsc.es:8080
 
 
 # Sources
-Based on BERTa transformer, Ancora corpus annotations and UDEP treebanks
+Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks
 
 ## Transformer:
 
@@ -28,7 +28,7 @@ Adaptation of French lemmatizer, using inhouse-developed word lists and corpus f
 
 ## Named Entity Recognition
 
-From original Ancora corpus (https://doi.org/10.5281/zenodo.4529299)
+From original AnCora corpus (https://doi.org/10.5281/zenodo.4529299)
 
 ## Word vectors
 
@@ -36,7 +36,7 @@ From FAstText word embeddings: https://doi.org/10.5281/zenodo.4522040
 
 ## Text Classification (To come)
 
-From TECLA corpus based on Agencia Catalana de Noticias Newswire
+From TeCla corpus based on Agencia Catalana de Noticias Newswire
 (https://doi.org/10.5281/zenodo.4627197)
 
 # Installation:
@@ -50,7 +50,7 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base
 
 * NERC
 
-* Fine-grained Parole-like POS tags (to comre)
+* Fine-grained Parole-like POS tags (to come)
 
 * Coarse XPOS tags
 
