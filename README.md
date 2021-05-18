@@ -13,13 +13,11 @@ Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all me
 
 ## Transformer:
 
-BERTa @ Hugging Face, a RoBERTa transformer from the 1.760 million token Catalan General Corpus (https://doi.org/10.5281/zenodo.4519348) 
+BERTa @ Hugging Face, a RoBERTa transformer from the 1.760 million token Catalan Text Corpus (https://doi.org/10.5281/zenodo.4519348) 
 
 ## Dependency Treebank, XPOS, sentence segmentation
 
-From version 3.6, with changes for pronouns and multi-word tokenization 
-
-https://universaldependencies.org/ca/
+From version 3.6 of the Catalan Universal Dependencies (https://universaldependencies.org/ca/) project treebank, with changes for pronouns and multi-word tokenization 
 
 
 ## Lemmatization
@@ -30,14 +28,14 @@ Adaptation of French lemmatizer, using inhouse-developed word lists and corpus f
 
 From original AnCora corpus (https://doi.org/10.5281/zenodo.4529299)
 
-## Word vectors
+## Word vectors ("core" model only)
 
 From FAstText word embeddings: https://doi.org/10.5281/zenodo.4522040
 
-## Text Classification (To come)
+<!---## Text Classification (To come)
 
 From TeCla corpus based on Agencia Catalana de Noticias Newswire
-(https://doi.org/10.5281/zenodo.4627197)
+(https://doi.org/10.5281/zenodo.4627197)-->
 
 # Installation:
 
@@ -50,7 +48,7 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base
 
 * NERC
 
-* Fine-grained Parole-like POS tags (to come)
+
 
 * Coarse XPOS tags
 
@@ -64,10 +62,14 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v1.3.2.3/ca_base
 
 * Morphological analysis
 
-* Text classification
+
 
 * Static word vectors (in core model)
-* 
+
+## To come:
+* Fine-grained Parole/Eagles POS tags
+
+* Text classification (to come) 
 
 # External evaluation on test split from UDEP corpus:
 ```
