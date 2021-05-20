@@ -7,8 +7,9 @@ Demo at: http://temu.bsc.es:8080
 
 # Versions
 There are three releases:
-## ca_base_web_trf & ca_core_web_trf contain a Catalan RoBERTa-based transformer as a common backbone for multitask training of the different components. The latter one ("core") also contains FastText embeddings to measure lexical similarity, although the "base" version can also measure semantic similarity, but using NER, dependency and other information, not directly on a dedicated distance matrix.
-## ca_core_web_lg, on the other hand, uses FastText embeddings as a training backbone, so it doesn't need transformers or GPUs.
+### ca_base_web_trf & ca_core_web_trf contain a Catalan RoBERTa-based transformer as a common backbone for multitask training of the different components. The latter one ("core") also contains FastText embeddings to measure lexical similarity, although the "base" version can also measure semantic similarity, but using NER, dependency and other information, not directly on a dedicated distance matrix.
+
+### ca_core_web_lg, on the other hand, uses FastText embeddings as a training backbone, so it doesn't need transformers or GPUs.
 
 This is the pre-production releases, and a spacy "official" release will be forthcoming.
 
