@@ -46,9 +46,9 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4/ca_base_w
 
 pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.3/ca_core_web_trf-3.2.3-py3-none-any.whl
 
-## core model without BERTa transoromer, but withy FastText embeddings
+## core model without BERTa transformer, but with FastText embeddings
 
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.0/ca_core_web_lg-3.1.1-py3-none-any.whl
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lg/ca_base_web_lg-3.2.4-py3-none-any.whl
 
 <!---
 # Includes:
@@ -79,17 +79,17 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.0/ca_core_w
 # External evaluation on test split from UDEP corpus for ca_base_web_trf:
 ```
   "token_acc":1.0,
-  "tag_acc":0.9899974352,
-  "pos_acc":0.9897161029,
-  "morph_acc":0.9810507962,
-  "lemma_acc":0.9317458328,
-  "dep_uas":0.9419736427,
-  "dep_las":0.9186940555,
-  "ents_p":0.9206049149,
-  "ents_r":0.9145539906,
-  "ents_f":0.9175694772,
-  "sents_p":0.9938271605,
-  "sents_r":0.9969040248,
-  "sents_f":0.9953632148,
-  "speed":4203.8544117436,
+  "tag_acc":0.9897155754,
+  "pos_acc":0.9891000487,
+  "morph_acc":0.9807149818,
+  "lemma_acc":0.9307432009,
+  "dep_uas":0.9424871508,
+  "dep_las":0.9204281328,
+  "ents_p":0.9226415094,
+  "ents_r":0.9183098592,
+  "ents_f":0.9204705882,
+  "sents_p":0.9953488372,
+  "sents_r":0.9938080495,
+  "sents_f":0.9945778466,
+  "speed":4177.1171988569,
 ```
