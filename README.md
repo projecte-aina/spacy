@@ -13,6 +13,21 @@ There are three releases:
 
 This is the pre-production releases, and a spacy "official" release will be forthcoming.
 
+
+# Installation:
+
+## base model without word vectors:
+
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4/ca_base_web_trf-3.2.4-py3-none-any.whl
+
+## core model with word embeddings for lexical similarity
+
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4.core/ca_core_web_trf-3.2.4-py3-none-any.whl
+
+## core model without BERTa transformer, but with Fasttext embeddings
+
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lg/ca_core_web_lg-3.2.4-py3-none-any.whl
+
 # Sources
 Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all merged into single training/dev corpora to enable simultaneous multi-task training.
 https://github.com/TeMU-BSC/spacy/releases/download/3.2.4/ANCORA_ca.zip
@@ -43,19 +58,6 @@ From FAstText word embeddings: https://doi.org/10.5281/zenodo.4522040
 From TeCla corpus based on Agencia Catalana de Noticias Newswire
 (https://doi.org/10.5281/zenodo.4627197)-->
 
-# Installation:
-
-## base model without word vectors:
-
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4/ca_base_web_trf-3.2.4-py3-none-any.whl
-
-## core model with word embeddings for lexical similarity
-
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4.core/ca_core_web_trf-3.2.4-py3-none-any.whl
-
-## core model without BERTa transformer, but with Fasttext embeddings
-
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lg/ca_core_web_lg-3.2.4-py3-none-any.whl
 
 <!---
 # Includes:
