@@ -47,7 +47,7 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4/ca_base_w
 
 pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.3/ca_core_web_trf-3.2.3-py3-none-any.whl
 
-## core model without BERTa transfromer, but withy FastText embeddings
+## core model without BERTa transoromer, but withy FastText embeddings
 
 pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.0/ca_core_web_lg-3.1.1-py3-none-any.whl
 
