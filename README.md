@@ -44,7 +44,7 @@ pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4/ca_base_w
 
 ## core model with word embeddings for lexical similarity
 
-pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.3/ca_core_web_trf-3.2.3-py3-none-any.whl
+pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4.core/ca_core_web_trf-3.2.4-py3-none-any.whl
 
 ## core model without BERTa transformer, but with FastText embeddings
 
