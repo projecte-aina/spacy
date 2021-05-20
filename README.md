@@ -52,7 +52,7 @@ From original AnCora corpus (https://doi.org/10.5281/zenodo.4529299)
 
 ## Word vectors ("core" model only)
 
-From FAstText word embeddings: https://doi.org/10.5281/zenodo.4522040
+From FastText word embeddings: https://doi.org/10.5281/zenodo.4522040
 
 
 # External evaluation on test split for ca_base_web_trf:
