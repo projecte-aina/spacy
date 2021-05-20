@@ -1,11 +1,9 @@
 # Spacy 3.0 releases
 
-Beta release for catalan Spacy 3.0 models (for testing purposes only)
+Public release for catalan Spacy 3.0 models
+Spacy usage basics: https://spacy.io/usage/spacy-101
 
-https://spacy.io/usage/spacy-101
-
-Demo at:
-http://temu.bsc.es:8080
+Demo at: http://temu.bsc.es:8080
 
 
 # Sources
