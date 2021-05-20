@@ -1,6 +1,7 @@
 # Spacy 3.0 releases
 
 Public release for catalan Spacy 3.0 models
+
 Spacy usage basics: https://spacy.io/usage/spacy-101
 
 Demo at: http://temu.bsc.es:8080
@@ -53,6 +54,24 @@ From original AnCora corpus (https://doi.org/10.5281/zenodo.4529299)
 
 From FAstText word embeddings: https://doi.org/10.5281/zenodo.4522040
 
+
+# External evaluation on test split for ca_base_web_trf:
+```
+  "token_acc":1.0,
+  "tag_acc":0.9897155754,
+  "pos_acc":0.9891000487,
+  "morph_acc":0.9807149818,
+  "lemma_acc":0.9307432009,
+  "dep_uas":0.9424871508,
+  "dep_las":0.9204281328,
+  "ents_p":0.9226415094,
+  "ents_r":0.9183098592,
+  "ents_f":0.9204705882,
+  "sents_p":0.9953488372,
+  "sents_r":0.9938080495,
+  "sents_f":0.9945778466,
+  "speed":4177.1171988569,
+```
 <!---## Text Classification (To come)
 
 From TeCla corpus based on Agencia Catalana de Noticias Newswire
@@ -85,20 +104,4 @@ From TeCla corpus based on Agencia Catalana de Noticias Newswire
 
 * Text classification  
 
-# External evaluation on test split from UDEP corpus for ca_base_web_trf:
-```
-  "token_acc":1.0,
-  "tag_acc":0.9897155754,
-  "pos_acc":0.9891000487,
-  "morph_acc":0.9807149818,
-  "lemma_acc":0.9307432009,
-  "dep_uas":0.9424871508,
-  "dep_las":0.9204281328,
-  "ents_p":0.9226415094,
-  "ents_r":0.9183098592,
-  "ents_f":0.9204705882,
-  "sents_p":0.9953488372,
-  "sents_r":0.9938080495,
-  "sents_f":0.9945778466,
-  "speed":4177.1171988569,
-```
+
