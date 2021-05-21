@@ -12,7 +12,8 @@ Demo at: http://temu.bsc.es:8080
 
 - **ca_core_web_lg**, on the other hand, uses FastText embeddings as a training backbone, so it doesn't need transformers or GPUs.
 
-This is the pre-production releases, and a spacy "official" release will be forthcoming.
+This is the pre-production releases, and a spacy "official" release will be forthcoming. For now, the syntax_iterators (for chunking), the lemmatization dictionaries and components, and other tweaks are embedded, outside of the usual spacy/lang directories or the spacy-lookup packages. 
+We provide the training code for the "base" release, using spacy's project structure and facilities (https://spacy.io/usage/projects).
 
 
 # Installation:
