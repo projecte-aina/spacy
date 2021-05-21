@@ -12,9 +12,11 @@ Demo at: http://temu.bsc.es:8080
 
 - **ca_core_web_lg**, on the other hand, uses FastText embeddings as a training backbone, so it doesn't need transformers or GPUs.
 
-This is the pre-production releases, and a spacy "official" release will be forthcoming. For now, the syntax_iterators (for chunking), the lemmatization dictionaries and components, and other tweaks are embedded, outside of the usual spacy/lang directories or the spacy-lookup packages. 
-We provide the training code for the "base" release, using spacy's project structure and facilities (https://spacy.io/usage/projects).
+This are the pre-production releases, and a spacy "official" release will be forthcoming. For now, the syntax_iterators (for chunking), the lemmatization dictionaries and other components,  as well as other tweaks, are embedded in code, outside of the usual spacy/lang directories or the spacy-lookup packages, and under the config/functions.py and the lemmas/ directory (that will be created when the project is run). 
+We provide the training code for the "base" release, using spacy's project structure and facilities (https://spacy.io/usage/projects).  You can clone directly from this github repo.
+The training data will be downloaded when you do the initialization of the project with:
 
+``` python -m spacy project assets ```
 
 # Installation:
 
@@ -36,7 +38,7 @@ https://github.com/TeMU-BSC/spacy/releases/download/3.2.4/ANCORA_ca.zip
 
 ## Transformer:
 
-BERTa @ Hugging Face, a RoBERTa transformer from the 1.760 million token Catalan Text Corpus (https://doi.org/10.5281/zenodo.4519348) 
+*bsc/roberta-base-ca-cased* @ Hugging Face, a RoBERTa transformer pretrained with the 1.760 million token Catalan Text Corpus (https://doi.org/10.5281/zenodo.4519348) 
 
 ## Dependency Treebank, XPOS, sentence segmentation
 
