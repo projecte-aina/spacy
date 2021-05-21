@@ -1,4 +1,20 @@
-# Spacy 3.0 releases
+# [CA] Model per a Spacy 3.0 de la llengua catalana
+
+Manual d'ús de l'Spacy: https://github.com/ccoreilly/spacy-catala
+
+Demo a: https://github.com/ccoreilly/spacy-catala
+
+# Versions
+
+- **ca_base_web_trf** & **ca_core_web_trf** contenen un transformer basat en RoBERTA com a base per un entrenament multitasca dels diferents components. La versió "core" conté, a més, vectors FastText per mesurar la similud semàntica. La la versió "base" també pot mesurar la similitud semàntica, però ho fa a partir de NER, dependències i altres informacions.
+
+- **ca_core_web_lg**, en canvi, fa servir els vectors FastText com a base per a l'entrenament dels components, de manera que no necesita transformers o GPU.
+
+Aquesta és una publicació pre-producció. El release oficial serà ben aviat. 
+
+Per ara, els syntax_iterators que s'usen per al chunking, els diccionaris de lematització i alguns altres components es troben incrustrats en el codi, enlloc de en els directoris habituals spacy/lang i spacy_lookups_data.
+
+# [EN] Spacy 3.0 releases
 
 Public release for catalan Spacy 3.0 models
 
