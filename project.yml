@@ -1,0 +1,103 @@
+title: "Multi-task training using transformers for a catalan model"
+description: "This project lets you train a part-of-speech tagger, morphologizer, NER and dependency parser from a [Universal Dependencies](https://universaldependencies.org/) corpus. It takes care of downloading the treebank, converting it to spaCy's format and training and evaluating the model. The template uses an adapted CA_ANCORA UDEP treebank by default. It uses a catalan language ROBERTa transformer to do multitask learning."
+
+# Variables can be referenced across the project.yml using ${vars.var_name}
+vars:
+  config: "config"
+  lang: "ca"
+  treebank: "ANCORA_ca"
+  train_name: "train_docs"
+  dev_name: "dev_docs"
+  test_name: "test_docs"
+  #vectors: "vectors"
+  package_name: "base_web_trf"
+  package_version: "3.2.5"
+  code: "functions.py"
+  transformer: "bsc/roberta-base-ca-cased"
+  gpu: 0
+
+# These are the directories that the project needs. The project CLI will make
+# sure that they always exist.
+directories: ["assets", "corpus", "training", "metrics", "configs", "packages"]
+
+assets:
+ - dest: "assets/{vars.treebank}/{vars.train_name}.conllu"
+ - dest: "assets/{vars.treebank}/{vars.dev_name}.conllu"
+   description: "Train and dev splits for multi-task training"
+ - dest: "assets/{vars.treebank}/{vars.test_name}.conllu"
+   description: "test split for independent evaluation of the resulting model"
+# - dest: "assets/{vars.transformer}"
+#   description: "BERTa transformer for multi-task training"
+#   git:
+#     repo: "https://huggingface.co/bsc/roberta-base-ca-cased/"
+#     branch: ""
+#     path: "tree/main"
+#   url: "https://huggingface.co/bsc/roberta-base-ca-cased/tree/main"
+   
+
+
+workflows:
+  all:
+    - preprocess
+    - train
+    - evaluate
+    - package
+
+commands:
+  - name: preprocess
+    help: "Convert the data to spaCy's format"
+    script:
+      - "mkdir -p corpus/${vars.treebank}"
+      - "python -m spacy convert assets/${vars.treebank}/${vars.train_name}.conllu corpus/${vars.treebank}/ --converter conllu --n-sents 10 --merge-subtokens"
+      - "python -m spacy convert assets/${vars.treebank}/${vars.dev_name}.conllu corpus/${vars.treebank}/ --converter conllu --n-sents 10 --merge-subtokens"
+      - "python -m spacy convert assets/${vars.treebank}/${vars.test_name}.conllu corpus/${vars.treebank}/ --converter conllu --n-sents 10 --merge-subtokens"
+      - "mv corpus/${vars.treebank}/${vars.train_name}.spacy corpus/${vars.treebank}/train.spacy"
+      - "mv corpus/${vars.treebank}/${vars.dev_name}.spacy corpus/${vars.treebank}/dev.spacy"
+      - "mv corpus/${vars.treebank}/${vars.test_name}.spacy corpus/${vars.treebank}/test.spacy"
+      - "spacy debug data -c configs/functions.py configs/config.cfg"
+    deps:
+      - "assets/${vars.treebank}/${vars.train_name}.conllu"
+      - "assets/${vars.treebank}/${vars.dev_name}.conllu"
+      - "assets/${vars.treebank}/${vars.test_name}.conllu"
+    outputs:
+      - "corpus/${vars.treebank}/train.spacy"
+      - "corpus/${vars.treebank}/dev.spacy"
+      - "corpus/${vars.treebank}/test.spacy"
+
+  - name: train
+    help: "Train ${vars.treebank}"
+    script:
+      - "python -m spacy train configs/${vars.config}.cfg --output training/${vars.treebank} --gpu-id ${vars.gpu} --paths.train corpus/${vars.treebank}/train.spacy --paths.dev corpus/${vars.treebank}/dev.spacy --nlp.lang=${vars.lang} --code configs/${vars.code} -V"
+    deps:
+      - "corpus/${vars.treebank}/train.spacy"
+      - "corpus/${vars.treebank}/dev.spacy"
+      - "configs/${vars.config}.cfg"
+    outputs:
+      - "training/${vars.treebank}/model-best"
+
+  - name: evaluate
+    help: "Evaluate on the test data and save the metrics"
+    script:
+      - "python -m spacy evaluate ./training/${vars.treebank}/model-best ./corpus/${vars.treebank}/test.spacy --output ./metrics/${vars.treebank}.json --gpu-id ${vars.gpu} --code configs/${vars.code}"
+    deps:
+      - "training/${vars.treebank}/model-best"
+      - "corpus/${vars.treebank}/test.spacy"
+    outputs:
+      - "metrics/${vars.treebank}.json"
+
+  - name: package
+    help: "Package the trained model so it can be installed"
+    script:
+      - "python -m spacy package training/${vars.treebank}/model-best packages --name ${vars.package_name} --version ${vars.package_version} -b wheel --code configs/${vars.code} --force"
+    deps:
+      - "training/${vars.treebank}/model-best"
+    outputs_no_cache:
+      - "packages/${vars.lang}_${vars.package_name}-${vars.package_version}/dist/en_${vars.package_name}-${vars.package_version}.whl"
+
+  - name: clean
+    help: "Remove intermediate files"
+    script:
+      - "rm -rf training/*"
+      - "rm -rf metrics/*"
+      - "rm -rf corpus/*"
+
