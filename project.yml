@@ -21,11 +21,16 @@ vars:
 directories: ["assets", "corpus", "training", "metrics", "configs", "packages"]
 
 assets:
- - dest: "assets/{vars.treebank}/{vars.train_name}.conllu"
- - dest: "assets/{vars.treebank}/{vars.dev_name}.conllu"
-   description: "Train and dev splits for multi-task training"
- - dest: "assets/{vars.treebank}/{vars.test_name}.conllu"
-   description: "test split for independent evaluation of the resulting model"
+ - dest: "assets/lemmas.zip"
+   url: "https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lemmas/lemmas.zip"
+ - dest: "assets/ANCORA_ca.zip"
+   url: "https://github.com/TeMU-BSC/spacy/releases/download/3.2.4/ANCORA_ca.zip"
+ 
+
+# - dest: "assets/{vars.treebank}/{vars.dev_name}.conllu"
+#   description: "Train and dev splits for multi-task training"
+# - dest: "assets/{vars.treebank}/{vars.test_name}.conllu"
+#   description: "test split for independent evaluation of the resulting model"
 # - dest: "assets/{vars.transformer}"
 #   description: "BERTa transformer for multi-task training"
 #   git:
@@ -47,7 +52,9 @@ commands:
   - name: preprocess
     help: "Convert the data to spaCy's format"
     script:
-      - "mkdir -p corpus/${vars.treebank}"
+      - "unzip assets/lemmas.zip"
+      - "mkdir corpus/ANCORA_ca"
+      - "unzip assets/ANCORA_ca.zip -d assets/"
       - "python -m spacy convert assets/${vars.treebank}/${vars.train_name}.conllu corpus/${vars.treebank}/ --converter conllu --n-sents 10 --merge-subtokens"
       - "python -m spacy convert assets/${vars.treebank}/${vars.dev_name}.conllu corpus/${vars.treebank}/ --converter conllu --n-sents 10 --merge-subtokens"
       - "python -m spacy convert assets/${vars.treebank}/${vars.test_name}.conllu corpus/${vars.treebank}/ --converter conllu --n-sents 10 --merge-subtokens"
@@ -56,13 +63,16 @@ commands:
       - "mv corpus/${vars.treebank}/${vars.test_name}.spacy corpus/${vars.treebank}/test.spacy"
       - "spacy debug data -c configs/functions.py configs/config.cfg"
     deps:
-      - "assets/${vars.treebank}/${vars.train_name}.conllu"
-      - "assets/${vars.treebank}/${vars.dev_name}.conllu"
-      - "assets/${vars.treebank}/${vars.test_name}.conllu"
+      - "assets/lemmas.zip"
+      - "assets/${vars.treebank}.zip"
     outputs:
       - "corpus/${vars.treebank}/train.spacy"
       - "corpus/${vars.treebank}/dev.spacy"
       - "corpus/${vars.treebank}/test.spacy"
+      - "lemmas/ca_lemma_exc.json"
+      - "lemmas/ca_lemma_index.json"
+      - "lemmas/ca_lemma_lookup.json"
+      - "lemmas/ca_lemma_rules.json"
 
   - name: train
     help: "Train ${vars.treebank}"
