@@ -12,7 +12,7 @@ Demo a: https://github.com/ccoreilly/spacy-catala
 
 Aquesta és una publicació pre-producció. El release oficial serà ben aviat. 
 
-Per ara, els syntax_iterators que s'usen per al chunking, els diccionaris de lematització i alguns altres components es troben incrustrats en el codi, enlloc de en els directoris habituals spacy/lang i spacy_lookups_data.
+Per ara, els syntax_iterators que s'usen per al chunking, els diccionaris de lematització i alguns altres components es troben incrustrats en el codi, enlloc de en els directoris habituals spacy/lang i spacy_lookups_data. Després del llançament oficial podrem posar cada component al directori que li correspon.
 
 # [EN] Spacy 3.0 releases
 
