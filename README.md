@@ -1,8 +1,8 @@
 # [CA] Model per a Spacy 3.0 de la llengua catalana
 
-Manual d'ús de l'Spacy: https://github.com/ccoreilly/spacy-catala
+Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
 
-Demo a: https://github.com/ccoreilly/spacy-catala
+Demo a: http://temu.bsc.es:8080
 
 # Versions
 
