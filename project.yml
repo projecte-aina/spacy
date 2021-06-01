@@ -25,21 +25,6 @@ assets:
    url: "https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lemmas/lemmas.zip"
  - dest: "assets/ANCORA_ca.zip"
    url: "https://github.com/TeMU-BSC/spacy/releases/download/3.2.5/ANCORA_ca.zip"
- 
-
-# - dest: "assets/{vars.treebank}/{vars.dev_name}.conllu"
-#   description: "Train and dev splits for multi-task training"
-# - dest: "assets/{vars.treebank}/{vars.test_name}.conllu"
-#   description: "test split for independent evaluation of the resulting model"
-# - dest: "assets/{vars.transformer}"
-#   description: "BERTa transformer for multi-task training"
-#   git:
-#     repo: "https://huggingface.co/bsc/roberta-base-ca-cased/"
-#     branch: ""
-#     path: "tree/main"
-#   url: "https://huggingface.co/bsc/roberta-base-ca-cased/tree/main"
-   
-
 
 workflows:
   all:
