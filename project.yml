@@ -24,7 +24,7 @@ assets:
  - dest: "assets/lemmas.zip"
    url: "https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lemmas/lemmas.zip"
  - dest: "assets/ANCORA_ca.zip"
-   url: "https://github.com/TeMU-BSC/spacy/releases/download/3.2.4/ANCORA_ca.zip"
+   url: "https://github.com/TeMU-BSC/spacy/releases/download/3.2.5/ANCORA_ca.zip"
  
 
 # - dest: "assets/{vars.treebank}/{vars.dev_name}.conllu"
