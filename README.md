@@ -50,7 +50,7 @@ The training data will be downloaded when you do the initialization of the proje
 
 # Sources
 Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all merged into single training/dev corpora to enable simultaneous multi-task training.
-https://github.com/TeMU-BSC/spacy/releases/download/3.2.4/ANCORA_ca.zip
+https://github.com/TeMU-BSC/spacy/releases/download/3.2.5/ANCORA_ca.zip
 
 ## Transformer:
 
