@@ -48,6 +48,9 @@ The training data will be downloaded when you do the initialization of the proje
 
 ```pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lg/ca_core_web_lg-3.2.4-py3-none-any.whl```
 
+
+## Non-wheel, tra.gzipped versions also available at https://github.com/TeMU-BSC/spacy/releases/tag/3.2.4gz
+
 # Sources
 Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all merged into single training/dev corpora to enable simultaneous multi-task training.
 https://github.com/TeMU-BSC/spacy/releases/download/3.2.5/ANCORA_ca.zip
