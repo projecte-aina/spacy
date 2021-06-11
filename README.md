@@ -4,7 +4,7 @@ Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
 
 Demo a: http://temu.bsc.es:8080
 
-### Official catalan spacy models from Explosion on forthcoming version 3.1.0 (soon)
+### Official catalan spacy models from Explosion coming soon with version 3.1.0
 ### BSC will continue generating its own, more experimental, models for quicker development cycles and testing new capabilities
 
 # Versions
