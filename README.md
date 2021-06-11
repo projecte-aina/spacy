@@ -4,6 +4,9 @@ Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
 
 Demo a: http://temu.bsc.es:8080
 
+### Official catalan spacy models from Explosion on forthcoming version 3.1.0 (soon)
+### BSC will continue generating its own, more experimental, models for quicker development cycles and testing new capabilities
+
 # Versions
 
 - **ca_base_web_trf** & **ca_core_web_trf** contenen un transformer basat en RoBERTA com a base per un entrenament multitasca dels diferents components. La versió "core" conté, a més, vectors FastText per mesurar la similud semàntica. La la versió "base" també pot mesurar la similitud semàntica, però ho fa a partir de NER, dependències i altres informacions.
@@ -23,7 +26,7 @@ Spacy usage basics: https://spacy.io/usage/spacy-101
 Demo at: http://temu.bsc.es:8080
 
 # Versions
-
+### new versions 3.2.6
 - **ca_base_web_trf** & **ca_core_web_trf** contain a Catalan RoBERTa-based transformer as a common backbone for multitask training of the different components. The latter one ("core") also contains FastText embeddings to measure lexical similarity, although the "base" version can also measure semantic similarity, but using NER, dependency and other information, not directly on a dedicated distance matrix.
 
 - **ca_core_web_lg**, on the other hand, uses FastText embeddings as a training backbone, so it doesn't need transformers or GPUs.
@@ -38,22 +41,22 @@ The training data will be downloaded when you do the initialization of the proje
 
 ## base model without word vectors:
 
-```pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4/ca_base_web_trf-3.2.4-py3-none-any.whl```
+```pip install https://github.com/TeMU-BSC/spacy/releases/download/3.2.6.2/ca_base_web_trf-3.2.6-py3-none-any.whl```
 
 ## core model with word embeddings for lexical similarity
 
-```pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4.core/ca_core_web_trf-3.2.4-py3-none-any.whl```
+```pip install hhttps://github.com/TeMU-BSC/spacy/releases/download/3.2.6.2/ca_core_web_trf-3.2.6-py3-none-any.whl```
 
 ## core model without BERTa transformer, but with Fasttext embeddings
 
-```pip install https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lg/ca_core_web_lg-3.2.4-py3-none-any.whl```
+```pip install https://github.com/TeMU-BSC/spacy/releases/download/3.2.6.2/ca_core_web_md-3.2.6-py3-none-any.whl```
 
 
 ## Non-wheel, tra.gzipped versions also available at https://github.com/TeMU-BSC/spacy/releases/tag/3.2.4gz
 
 # Sources
 Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all merged into single training/dev corpora to enable simultaneous multi-task training.
-https://github.com/TeMU-BSC/spacy/releases/download/3.2.5/ANCORA_ca.zip
+https://github.com/TeMU-BSC/spacy/releases/download/3.2.6/ANCORA_ca.zip
 
 ## Transformer:
 
@@ -79,20 +82,20 @@ From FastText word embeddings: https://doi.org/10.5281/zenodo.4522040
 
 # External evaluation on test split for ca_base_web_trf:
 ```
-  "token_acc":1.0,
-  "tag_acc":0.9897155754,
-  "pos_acc":0.9891000487,
-  "morph_acc":0.9807149818,
-  "lemma_acc":0.9307432009,
-  "dep_uas":0.9424871508,
-  "dep_las":0.9204281328,
-  "ents_p":0.9226415094,
-  "ents_r":0.9183098592,
-  "ents_f":0.9204705882,
-  "sents_p":0.9953488372,
-  "sents_r":0.9938080495,
-  "sents_f":0.9945778466,
-  "speed":4177.1171988569,
+  "token_acc":0.9996689501,
+  "tag_acc":0.9866830883,
+  "pos_acc":0.9864785119,
+  "morph_acc":0.9722713864,
+  "lemma_acc":0.9679711664,
+  "dep_uas":0.9409872785,
+  "dep_las":0.9182501866,
+  "ents_p":0.9153339605,
+  "ents_r":0.9136150235,
+  "ents_f":0.9144736842,
+  "sents_p":0.9861538462,
+  "sents_r":0.9922600619,
+  "sents_f":0.9891975309,
+  "speed":4129.6607627658
 ```
 <!---## Text Classification (To come)
 
