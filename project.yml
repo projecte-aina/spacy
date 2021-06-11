@@ -11,7 +11,7 @@ vars:
   test_name: "test_docs"
   #vectors: "vectors"
   package_name: "base_web_trf"
-  package_version: "3.2.5"
+  package_version: "3.2.6"
   code: "functions.py"
   transformer: "bsc/roberta-base-ca-cased"
   gpu: 0
@@ -24,7 +24,7 @@ assets:
  - dest: "assets/lemmas.zip"
    url: "https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lemmas/lemmas.zip"
  - dest: "assets/ANCORA_ca.zip"
-   url: "https://github.com/TeMU-BSC/spacy/releases/download/3.2.5/ANCORA_ca.zip"
+   url: "https://github.com/TeMU-BSC/spacy/releases/download/3.2.6/ANCORA_ca.zip"
 
 workflows:
   all:
