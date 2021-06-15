@@ -71,6 +71,8 @@ From version 3.6 of the Catalan Universal Dependencies (https://universaldepende
 
 Adaptation of French lemmatizer, using  word lists and corpus frequencies developed in house.
 
+https://github.com/TeMU-BSC/spacy/releases/download/v3.2.4lemmas/lemmas.zip
+
 ## Named Entity Recognition
 
 From original AnCora corpus (https://doi.org/10.5281/zenodo.4529299)
