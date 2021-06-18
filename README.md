@@ -1,6 +1,18 @@
 # [CA] Model per a Spacy 3.0 de la llengua catalana
 
-Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
+###Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
+
+####To use our models, after installing:
+```
+import spacy
+
+nlp = spacy.load("ca_core_web_md")
+
+doc = nlp("Setze jutges d'un jutjat mengen fetge d'un penjat.")
+
+for t in doc: print(t.text,"\t",t.lemma_)
+
+```
 
 Demo a: http://temu.bsc.es:8080
 
