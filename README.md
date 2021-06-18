@@ -1,8 +1,8 @@
 # [CA] Model per a Spacy 3.0 de la llengua catalana
 
-###Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
+### Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
 
-####To use our models, after installing:
+#### To use our models, after installing:
 ```
 import spacy
 
