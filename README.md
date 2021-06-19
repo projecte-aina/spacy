@@ -21,13 +21,13 @@ Demo a: http://temu.bsc.es:8080
 
 # Versions
 
-- **ca_base_web_trf** & **ca_core_web_trf** contenen un transformer basat en RoBERTA com a base per un entrenament multitasca dels diferents components. La versió "core" conté, a més, vectors FastText per mesurar la similud semàntica. La la versió "base" també pot mesurar la similitud semàntica, però ho fa a partir de NER, dependències i altres informacions.
+- **ca_base_web_trf** & **ca_core_web_trf** contenen un transformer basat en RoBERTA com a base per un entrenament multitasca dels diferents components. La versió "core" conté, a més, vectors FastText per mesurar la similitud semàntica. La versió "base" també pot mesurar la similitud semàntica, però ho fa a partir de NER, dependències i altres informacions.
 
 - **ca_core_web_lg**, en canvi, fa servir els vectors FastText com a base per a l'entrenament dels components, de manera que no necesita transformers o GPU.
 
 Aquesta és una publicació pre-producció. El release oficial serà ben aviat. 
 
-Per ara, els syntax_iterators que s'usen per al chunking, els diccionaris de lematització i alguns altres components es troben incrustrats en el codi, enlloc de en els directoris habituals spacy/lang i spacy_lookups_data. Després del llançament oficial podrem posar cada component al directori que li correspon.
+Per ara, els syntax_iterators que s'usen per al chunking, els diccionaris de lematització i alguns altres components es troben incrustrats en el codi, en lloc d'en els directoris habituals spacy/lang i spacy_lookups_data. Després del llançament oficial podrem posar cada component al directori que li correspon.
 
 # [EN] Spacy 3.0 releases
 
@@ -57,7 +57,7 @@ The training data will be downloaded when you do the initialization of the proje
 
 ## core model with word embeddings for lexical similarity
 
-```pip install hhttps://github.com/TeMU-BSC/spacy/releases/download/3.2.6.2/ca_core_web_trf-3.2.6-py3-none-any.whl```
+```pip install https://github.com/TeMU-BSC/spacy/releases/download/3.2.6.2/ca_core_web_trf-3.2.6-py3-none-any.whl```
 
 ## core model without BERTa transformer, but with Fasttext embeddings
 
