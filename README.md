@@ -16,7 +16,7 @@ for t in doc: print(t.text,"\t",t.lemma_)
 
 Demo a: http://temu.bsc.es:8080
 
-### Official catalan spacy models from Explosion coming soon with version 3.1.0
+### Official catalan spacy models from Explosion now out with version 3.1.0
 ### BSC will continue generating its own, more experimental, models for quicker development cycles and testing new capabilities
 
 # Versions
@@ -38,7 +38,13 @@ Spacy usage basics: https://spacy.io/usage/spacy-101
 Demo at: http://temu.bsc.es:8080
 
 # Versions
-### new versions 3.2.6
+### New (and last) version for spacy 3.0
+- **ca_bas_bsc_trf Contains improvements in training that resove some issues with clitic tokenization and lemmatization. This is the last release before doing 3.1 BSC models that will introduce components and improvements
+
+
+pip install https://github.com/TeMU-BSC/spacy/releases/download/3.2.7/ca_base_bsc_trf-3.2.7-py3-none-any.whl
+
+### versions 3.2.6
 - **ca_base_web_trf** & **ca_core_web_trf** contain a Catalan RoBERTa-based transformer as a common backbone for multitask training of the different components. The latter one ("core") also contains FastText embeddings to measure lexical similarity, although the "base" version can also measure semantic similarity, but using NER, dependency and other information, not directly on a dedicated distance matrix.
 
 - **ca_core_web_lg**, on the other hand, uses FastText embeddings as a training backbone, so it doesn't need transformers or GPUs.
@@ -50,6 +56,11 @@ The training data will be downloaded when you do the initialization of the proje
 ``` python -m spacy project assets ```
 
 # Installation:
+
+## definitive bsc 3.0 model:
+
+pip install https://github.com/TeMU-BSC/spacy/releases/download/3.2.7/ca_base_bsc_trf-3.2.7-py3-none-any.whl
+
 
 ## base model without word vectors:
 
@@ -64,7 +75,7 @@ The training data will be downloaded when you do the initialization of the proje
 ```pip install https://github.com/TeMU-BSC/spacy/releases/download/3.2.6.2/ca_core_web_md-3.2.6-py3-none-any.whl```
 
 
-## Non-wheel, tra.gzipped versions also available at https://github.com/TeMU-BSC/spacy/releases/tag/3.2.4gz
+## Non-wheel, gzipped versions also available at https://github.com/TeMU-BSC/spacy/releases/tag/3.2.4gz
 
 # Sources
 Based on BERTa transformer, AnCora corpus annotations and UDEP treebanks, all merged into single training/dev corpora to enable simultaneous multi-task training.
