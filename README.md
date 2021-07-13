@@ -21,6 +21,9 @@ Demo a: http://temu.bsc.es:8080
 
 # Versions
 
+### New (and last) version for spacy 3.0
+- **ca_bas_bsc_trf Contains improvements in training that resove some issues with clitic tokenization and lemmatization. This is the last release before doing 3.1 BSC models that will introduce components and improvements
+
 - **ca_base_web_trf** & **ca_core_web_trf** contenen un transformer basat en RoBERTA com a base per un entrenament multitasca dels diferents components. La versió "core" conté, a més, vectors FastText per mesurar la similitud semàntica. La versió "base" també pot mesurar la similitud semàntica, però ho fa a partir de NER, dependències i altres informacions.
 
 - **ca_core_web_lg**, en canvi, fa servir els vectors FastText com a base per a l'entrenament dels components, de manera que no necesita transformers o GPU.
