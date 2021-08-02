@@ -86,7 +86,29 @@ https://github.com/TeMU-BSC/spacy/releases/download/3.2.6/ANCORA_ca.zip
 
 ## Transformer:
 
-*bsc/roberta-base-ca-cased* @ Hugging Face, a RoBERTa transformer pretrained with the 1.760 million token Catalan Text Corpus (https://doi.org/10.5281/zenodo.4519348) 
+*bsc/roberta-base-ca-cased* @ Hugging Face, a RoBERTa transformer pretrained with the 1.760 million token Catalan Text Corpus. Bibtex citation:
+
+```bibtex
+@inproceedings{armengol-estape-etal-2021-multilingual,
+    title = "Are Multilingual Models the Best Choice for Moderately Under-resourced Languages? {A} Comprehensive Assessment for {C}atalan",
+    author = "Armengol-Estap{\'e}, Jordi  and
+      Carrino, Casimiro Pio  and
+      Rodriguez-Penagos, Carlos  and
+      de Gibert Bonet, Ona  and
+      Armentano-Oller, Carme  and
+      Gonzalez-Agirre, Aitor  and
+      Melero, Maite  and
+      Villegas, Marta",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.437",
+    doi = "10.18653/v1/2021.findings-acl.437",
+    pages = "4933--4946",
+}
+```
 
 ## Dependency Treebank, XPOS, sentence segmentation
 
