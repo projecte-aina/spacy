@@ -14,7 +14,7 @@ for t in doc: print(t.text,"\t",t.lemma_)
 
 ```
 
-Demo a: http://temu.bsc.es:8080
+
 
 ### Official catalan spacy models from Explosion now out with version 3.1.0
 ### BSC will continue generating its own, more experimental, models for quicker development cycles and testing new capabilities
