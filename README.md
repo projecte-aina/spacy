@@ -38,7 +38,7 @@ Public release for catalan Spacy 3.0 models
 
 Spacy usage basics: https://spacy.io/usage/spacy-101
 
-Demo at: http://temu.bsc.es:8080
+Demo at: http://temu.bsc.es:8081
 
 # Versions
 ### New (and last) version for spacy 3.0
