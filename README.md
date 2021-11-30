@@ -1,3 +1,10 @@
+# Novetats: 
+## Amb l'alliberament de la versió 3.2 d'Spacy, que incorpora les millores desenvolupades pel TEMU-BSC, a mes del últim model de llengua, aquest repositori s'actualitzará properament amb versions experimentals, milloras, models propis i funcionalitats afegides a la plataforma des del projecte AINA: https://github.com/projecte-aina/lm-catalan
+
+# News: 
+## With the release of Spacy version 3.2, which includes the enhancements developed at TEMU-BSC, in addition of the latest language model, this repo will be updated shortly with experimental versions, models and  functionalities added to the plaform by the AINA project: https://github.com/projecte-aina/lm-catalan
+
+
 # [CA] Model per a Spacy 3.0 de la llengua catalana
 
 ### Manual d'ús de l'Spacy: https://spacy.io/usage/spacy-101
@@ -38,7 +45,6 @@ Public release for catalan Spacy 3.0 models
 
 Spacy usage basics: https://spacy.io/usage/spacy-101
 
-Demo at: http://temu.bsc.es:8081
 
 # Versions
 ### New (and last) version for spacy 3.0
